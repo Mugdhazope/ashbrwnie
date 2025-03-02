@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  padding: 0px;
+  margin: 0px;
+  font-family: "Josefin Sans", serif;
+  box-sizing: border-box;
+
+}
+
+
+/* .josefin-sans-<uniquifier> {
+  font-family: "Josefin Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */

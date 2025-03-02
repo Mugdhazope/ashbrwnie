@@ -1,0 +1,167 @@
+/* AboutUsPage.css */
+.about-page {
+    background: white;
+    color: #3E352E;
+  }
+  
+  /* Hero Section */
+  .hero-container {
+    padding: 4rem 0;
+    background: linear-gradient(to bottom, #FFF9F5 60%, white 40%);
+  }
+  
+  .two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  
+  .hero-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 15px 15px 0 #9B8075;
+  }
+  
+  .hero-stats {
+    padding-left: 3rem;
+  }
+  
+  .stats-grid {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  /* Ecosystem Section */
+  .ecosystem-section {
+    padding: 5rem 0;
+    background: #FCF8F5;
+  }
+  
+  .three-column {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  
+  .tech-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+  }
+  
+  .tech-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .tech-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+  }
+  
+  /* Story Section */
+  .story-section {
+    padding: 5rem 0;
+  }
+  
+  .reversed {
+    direction: rtl;
+  }
+  
+  .story-visuals {
+    position: relative;
+  }
+  
+  .timeline-highlights {
+    position: absolute;
+    bottom: -30px;
+    left: 20px;
+    right: 20px;
+    background: rgba(255,255,255,0.9);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .platform-stats {
+    display: grid;
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  
+  .platform-stats li {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+  }
+  
+  .platform-stats strong {
+    font-size: 1.8rem;
+    color: #9B8075;
+    min-width: 80px;
+  }
+  
+  .tech-stack {
+    margin-top: 2rem;
+  }
+  
+  .stack-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .stack-icons img {
+    height: 40px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+  }
+  
+  .stack-icons img:hover {
+    opacity: 1;
+  }
+  
+  /* Impact Section */
+  .impact-section {
+    padding: 5rem 0;
+    background: #FFF9F5;
+  }
+  
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .metric-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .two-column, 
+    .three-column,
+    .dashboard-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .hero-stats {
+      padding-left: 0;
+      margin-top: 2rem;
+    }
+    
+    .timeline-highlights {
+      position: static;
+      margin-top: 2rem;
+    }
+  }

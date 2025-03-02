@@ -1,0 +1,251 @@
+/* Carousel Container */
+.custom-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1600px; /* Increased max-width */
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 3px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
+}
+
+/* Slide Container */
+.slide-container {
+    position: relative;
+    height: 600px; /* Increased height */
+    overflow: hidden;
+}
+
+/* Individual Slide */
+.slide-container > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Slide Image */
+.slide-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the slide */
+}
+
+/* Slide Content (Title and Description) */
+.slide-container > div > div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    text-align: center;
+    color: #7b594e; /* Updated text color */
+}
+
+.slide-container h3 {
+    font-size: 2.5rem; /* Slightly larger font size for the title */
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #7b594e; /* Updated text color */
+}
+
+.slide-container p {
+    font-size: 1.25rem; /* Slightly larger font size for the description */
+    margin: 0;
+    color: #7b594e; /* Updated text color */
+}
+
+/* Dots Container */
+.dots-container {
+    position: absolute;
+    bottom: 30px; /* Adjusted position for larger carousel */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10; /* Ensure dots are above the slides */
+}
+
+/* Individual Dot */
+.dots-container button {
+    width: 14px; /* Slightly larger dots */
+    height: 14px; /* Slightly larger dots */
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Active Dot */
+.dots-container button.active,
+.dots-container button[class*="bg-white"] {
+    background-color: white !important; /* Active dot color */
+    transform: scale(1.2); /* Slightly enlarge the active dot */
+}
+
+/* Hover Effect for Dots */
+.dots-container button:hover {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Pause on Hover */
+.custom-carousel:hover .dots-container button {
+    background-color: rgba(255, 255, 255, 0.8); /* Make dots more visible on hover */
+}
+
+/* Arrow Navigation */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+
+/* Arrow Hover Effect */
+.custom-carousel:hover .carousel-arrow {
+    opacity: 0.8;
+}
+
+.carousel-arrow:hover {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.2);
+}
+
+
+.carousel-arrow:focus {
+    outline: none;
+}
+
+/* Arrow Positioning */
+.left-arrow {
+    left: 20px;
+}
+
+.right-arrow {
+    right: 20px;
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+/* Arrow Hover Effect */
+.carousel-arrow:hover {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.2);
+}
+
+.carousel-arrow:focus {
+    outline: none;
+}
+
+/* Arrow Icon */
+.carousel-arrow svg {
+    width: 30px;
+    height: 30px;
+    color: white;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    stroke-width: 2;
+}
+
+/* Arrow Positioning */
+.left-arrow {
+    left: 20px;
+}
+
+.right-arrow {
+    right: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .carousel-arrow svg {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .left-arrow {
+        left: 10px;
+    }
+
+    .right-arrow {
+        right: 10px;
+    }
+}
+
+/* Arrow Icon */
+.carousel-arrow svg {
+    width: 10px;
+    height: 10px;
+    color: white;
+    stroke-width: 1.5;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .slide-container {
+        height: 400px; /* Adjusted height for smaller screens */
+    }
+
+    .slide-container h3 {
+        font-size: 2rem; /* Adjusted font size for mobile */
+    }
+
+    .slide-container p {
+        font-size: 1rem; /* Adjusted font size for mobile */
+    }
+
+    .dots-container button {
+        width: 12px;
+        height: 12px; /* Adjusted dot size for mobile */
+    }
+
+    .carousel-arrow {
+        width: 40px;
+        height: 40px;
+    }
+
+    .carousel-arrow svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .left-arrow {
+        left: 15px;
+    }
+
+    .right-arrow {
+        right: 15px;
+    }
+}
+
+.section-title {
+    text-align: center;
+    font-weight: 600;
+    color: #2c3e50;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #7b594e;
+    display: inline-block;
+    margin: 0 auto;
+  }
+
+  

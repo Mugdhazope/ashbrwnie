@@ -1,0 +1,140 @@
+.product-card {
+  position: relative;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.product-card:hover .product-image {
+  opacity: 0.8; /* Slightly fade the image */
+}
+
+/* Product Details */
+.product-details {
+  padding: 1.5rem;
+  text-align: center;
+  background: white;
+  z-index: 2;
+  position: relative;
+}
+
+.product-name {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.product-price {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 1.2rem;
+}
+
+.add-to-cart-btn {
+  width: 100%;
+  padding: 0.8rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  background-color: #7b594e; /* Normal color */
+  border: none;
+  color: white;
+}
+.add-to-cart-btn:hover {
+  background-color: #c7a89e !important; /* Light brown on hover */
+  color: white;
+}
+
+/* Description Overlay */
+.product-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.product-card:hover .product-overlay {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.product-description {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  padding: 0.5rem;
+}
+
+.sold-out-btn {
+  width: 100%;
+  padding: 0.8rem;
+  font-weight: 600;
+  color: white !important; /* Ensure text is visible */
+  background-color: #aca9a7 !important; /* Force grayish-brown background */
+  border: none !important; /* Border */
+  cursor: not-allowed;
+  box-shadow: none;
+  opacity: 1 !important; /* Remove Bootstrap's disabled opacity */
+}
+
+.sold-out-btn:hover {
+  background-color: #c7a89e !important; /* Maintain background on hover */
+  color: white !important;
+  border: 2px solid brown !important;
+}
+/* Star Rating */
+.star-rating {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.star {
+  font-size: 18px;
+  color: #ccc; /* Default grey */
+  margin: 0 2px;
+  transition: color 0.3s ease-in-out;
+}
+
+.star.filled {
+  color: #FFD700; /* Gold color for filled stars */
+}
+
+/* New Tag Styling */
+.new-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #a87235; /* Red color */
+  color: white;
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 5px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  transition: opacity 0.3s ease;
+}
+
+/* Make the "New" tag disappear on hover */
+.product-card:hover .new-tag {
+  opacity: 0;
+}
