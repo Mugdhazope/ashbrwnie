@@ -12,6 +12,8 @@ import Register from './pages/Register';
 import ShopAll from "./pages/ShopAll";
 import Reviews from "./pages/Reviews";
 
+//shut up
+
 
 const ProtectedRoute = ({ children }: { children: ReactNode }): ReactElement | null => {
 
